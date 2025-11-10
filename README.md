@@ -75,4 +75,61 @@
 
 >Because it's tailless, the zagi requires careful CG placement. Too far back --> unstable pitch oscillations; too forward --> sluggish response
     
+## Simualtion of Zagi Flying Wing
 
+>The physical parameters, aerodynamic coefficients and propulsive (Thrust and Motor) coefficients are extracted from "Small Unmanned Aircraft: Theory and Practice" - Randal W Beard and Timothy W McLain
+
+| Parameters | Value |
+|:-----: | :----:|
+| mass(m) | 1.56 kg  |
+| Ixx | 0.1147 kg-$m^2$ |
+| Iyy | 0.0576 kg-$m^2$ |
+| Izz | 0.1712 kg-$m^2$ |
+| Ixz | 0.0015 kg-$m^2$ |
+|Wing Area (S)| 0.2589 $m^2$ |
+| Wing span (b) | 1.4224 $m$ |
+| Mean aerodynamic chord (c) | 0.3302 $m$ |
+| $S_{prop}$ | 0.0314 |
+| Density ($\rho$)| 1.2682 kg-$m^3$ |
+| $k_{motor}$ | 20 |
+| $k_{T_p}$ | 0 |
+| $k_{\Omega}$ | 0 |
+| Oswald efficiency factor ($e$) | 0.9 |   
+
+| Longitudinal Coefficients | Value |
+|:-----: | :----:|
+| $C_{L_0}$ | 0.09167  |
+| $C_{D_0}$ | 0.01631 |
+| $C_{m_0}$ | -0.02338 |
+| $C_{L_\alpha}$ | 3.5016 |
+| $C_{D_\alpha}$ | 0.2108 |
+|$C_{m_\alpha}$| -0.5675 |
+| $C_{L_q}$ | 2.8932 |
+| $C_{D_q}$ | 0 |
+| $C_{m_q}$ | -1.3990 |
+| $C_{L_{\delta_e}}$ | 0.2724 |
+| $C_{D_{\delta_e}}$ | 0.3045 |
+| $C_{m_{\delta_e}}$ | -0.3245 |
+| $C_{prop}$ | 1.0  |
+| $M$ | 50 |
+| $\alpha_0$ | 0.4712 |
+| $\epsilon$ | 0.1592 |
+| $C_{D_p}$ | 0.0254 |
+
+| Lateral Coefficients | Value |
+|:-----: | :----:|
+| $C_{Y_0}$ | 0  |
+| $C_{l_0}$ | 0 |
+| $C_{n_0}$ | 0 |
+| $C_{Y_\beta}$ | -0.07359 |
+| $C_{l_\beta}$ | -0.02854 |
+|$C_{n_\beta}$| -0.00040 |
+| $C_{Y_p}$ | 0 |
+| $C_{l_p}$ | -0.3209 |
+| $C_{n_p}$ | -0.01297 |
+| $C_{Y_r}$ | 0 |
+| $C_{l_r}$ | 0.03066 |
+| $C_{n_r}$ | -0.00434 |
+| $C_{Y_{\delta_a}}$ | 0  |
+|$C_{l_{\delta_a}}$ | -0.1682|
+| $C_{n_{\delta_a}}$ | -0.00328 |
