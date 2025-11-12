@@ -156,3 +156,33 @@
 - Yawing Moment Coefficient
 
     $C_n = C_{n_0} + C_{n_\beta}\beta + C_{n_p}\frac{b}{2V_a}p + C_{n_r}\frac{b}{2V_a}r + C_{n_{\delta_a}}\delta_a $
+
+### Propulsion Forces and Moments
+
+- Propeller Thrust
+
+    $F_{x_p} = \frac{1}{2}S_{prop}C_{prop}((k_{motor}\delta_t)^2-V_a^2)$
+
+$$
+    \mathbf{f}_p = 
+    \frac{1}{2}\rho S_{\text{prop}} C_{\text{prop}}
+    \begin{bmatrix}
+    (k_{\text{motor}}\delta_t)^2 - V_a^2 \\
+    0 \\
+    0
+    \end{bmatrix}
+$$
+
+- Propeller Torque
+
+    $T_p = -k_{T_p}(k_\Omega \delta_t)^2$
+
+    $$
+    \mathbf{m}_p = 
+    
+    \begin{bmatrix}
+    (-k_{T_p}(k_\Omega \delta_t)^2 \\
+    0 \\
+    0
+    \end{bmatrix}
+$$
