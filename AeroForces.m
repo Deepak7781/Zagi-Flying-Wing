@@ -1,4 +1,4 @@
-function [Fx, Fy, Fz] =  AeroForces(params, alpha, beta, del_e, del_a, p, q, r)
+function [Fx, Fy, Fz] =  AeroForces(params, alpha, beta, V,  del_e, del_a, p, q, r)
 
 
 sigma_x = (1 + e^(-params.M*(alpha - params.alpha0)) + e^(params.M*(alpha + params.alpha0))) / ((1 + e^(-params.M*(alpha + params.alpha0))) * (1 + e^(params.M*(alpha + params.alpha0))));
