@@ -1,10 +1,10 @@
 function Forces =  AeroForces(params, alpha, beta, Va,  del_e, del_a, p, q, r)
 
 
-sigma_x = (1 + exp((-params.M*(alpha - params.alpha0)))) + exp((params.M*(alpha + params.alpha0))) / ((1 + exp((-params.M*(alpha + params.alpha0))))) * (1 + exp((params.M*(alpha + params.alpha0))));
-CL = (1 - sigma_x)*(params.CL0 + (params.CL_alpha*alpha)) + sigma_x*(2*alpha*sin(alpha)^2*cos(alpha)) +...
-    params.CLq*(params.c/2*Va)*q + ...
-    params.CL_del_e*del_e;
+% sigma_x = (1 + exp((-params.M*(alpha - params.alpha0)))) + exp((params.M*(alpha + params.alpha0))) / ((1 + exp((-params.M*(alpha + params.alpha0))))) * (1 + exp((params.M*(alpha + params.alpha0))));
+% CL = (1 - sigma_x)*(params.CL0 + (params.CL_alpha*alpha)) + sigma_x*(2*alpha*sin(alpha)^2*cos(alpha)) +...
+%    params.CLq*(params.c/2*Va)*q + ...
+%   params.CL_del_e*del_e; %Needs to be changed
 
 AR = params.b^2 / params.S;
 CD = params.CD0 + params.CDp + params.CD_alpha*alpha + CL^2/(pi*params.e*AR) + params.CDq*(params.c/2*Va)*q + params.CD_del_e*del_e;
