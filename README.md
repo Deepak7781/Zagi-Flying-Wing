@@ -82,10 +82,10 @@
 | Parameter | Value | Category |
 |-----------|-------|----------|
 | mass (m) | 1.56 kg | Inertial |
-| Ixx | 0.1147 kg-$m^2$ | Inertial |
-| Iyy | 0.0576 kg-$m^2$ | Inertial |
-| Izz | 0.1712 kg-$m^2$ | Inertial |
-| Ixz | 0.0015 kg-$m^2$ | Inertial |
+| Ixx | 0.1147 kg- $m^2$ | Inertial |
+| Iyy | 0.0576 kg- $m^2$ | Inertial |
+| Izz | 0.1712 kg- $m^2$ | Inertial |
+| Ixz | 0.0015 kg- $m^2$ | Inertial |
 | Wing Area (S) | 0.2589 $m^2$ | Geometric |
 | Wing span (b) | 1.4224 m | Geometric |
 | Mean aerodynamic chord (c) | 0.3302 m | Geometric |
