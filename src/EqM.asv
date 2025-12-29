@@ -10,9 +10,9 @@ function dx = EqM(params,X,U)
     q = X(5);
     r = X(6);
 
-    phi = deg2rad(X(7));
-    theta = deg2rad(X(8));
-    psi = deg2rad(X(9));
+    phi = deg2rad(X(7);
+    theta = X(8);
+    psi = X(9);
 
     x_e  = X(10);
     y_e = X(11);
@@ -43,7 +43,7 @@ function dx = EqM(params,X,U)
 
     dwdx = I\((M_b) - (cross(omega, I*omega)));
     
-    R_euler = [1 tan(theta)*sin(phi) tan(theta)*cos(phi); 0 cos(phi) -sin(phi); 0 sec(theta)*sin(phi) sec(theta)*cos(phi)];
+    R_euler = [1 tan(theta) tan(theta)*cos(phi); 0 cos(phi) -sin(phi); 0 sec(theta)*sin(phi) sec(theta)*cos(phi)];
     deulerdx = R_euler * omega;
 
 
@@ -52,7 +52,7 @@ function dx = EqM(params,X,U)
     R_phi = [1 0 0; 0 cos(phi) sin(phi); 0 -sin(phi) cos(phi)];
 
 
-    R = (transpose(R_psi))*(transpose(R_theta))*(transpose(R_phi));
+    R = transpose(R_phi)*transpose(R_theta)*transpose(R_psi);
     dposdx = R*V_b;
 
     dx = [dVdx; dwdx; deulerdx; dposdx];
