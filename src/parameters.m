@@ -61,3 +61,5 @@ params.Cl_del_a = 0.1682;
 params.Cn_del_a = -0.00328;
 
 save('params.mat');
+
+myBus = Simulink.Bus.createObject(params);
