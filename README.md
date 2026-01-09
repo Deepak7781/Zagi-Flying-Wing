@@ -177,12 +177,11 @@ $$
 
     $T_p = -k_{T_p}(k_\Omega \delta_t)^2$
 
-    $$
-    \mathbf{m}_p = 
-    
-    \begin{bmatrix}
+$$
+\mathbf{m}_p =   
+\begin{bmatrix}
     (-k_{T_p}(k_\Omega \delta_t)^2 \\
     0 \\
     0
-    \end{bmatrix}
+\end{bmatrix}
 $$
