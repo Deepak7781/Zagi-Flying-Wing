@@ -23,8 +23,13 @@ function dx = EqM(params,X,U)
 
     % Extarct control inputs
 
-    del_e = U(1);
-    del_a = U(2);
+    del_r = U(1);
+    del_l = U(2);
+
+    control_deflection = 0.5*[1 1;-1 1]*[del_r;del_l];
+    del_e = control_deflection(1);
+    del_a = control_deflection(2);
+
     del_t = U(3);
 
     % Calculate intermediate values
@@ -52,7 +57,7 @@ function dx = EqM(params,X,U)
     R_phi = [1 0 0; 0 cos(phi) sin(phi); 0 -sin(phi) cos(phi)];
 
 
-    R = (transpose(R_psi))*(transpose(R_theta))*(transpose(R_phi));
+    R = transpose(R_phi*R_theta*R_psi);
     dposdx = R*V_b;
 
     dx = [dVdx; dwdx; deulerdx; dposdx];

@@ -15,7 +15,7 @@ params.rho = 1.2682; % Density - kg/m^3
 % Motor parameters
 
 params.S_prop = 0.0314; % Area of propeller - m^2
-params.k_motor = 20;
+params.k_motor = 33;
 params.k_Tp = 0;
 params.k_omega = 0;
 params.e = 0.9;
@@ -62,4 +62,3 @@ params.Cn_del_a = -0.00328;
 
 save('params.mat');
 
-myBus = Simulink.Bus.createObject(params);
